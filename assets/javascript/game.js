@@ -1,40 +1,46 @@
-var words = ["javascript", "middlesex", "colts"];
+var words = ["javascript", "middlesex", "colts", "animation"];
+
+// var el = document.getElementById("element");
+// el.innerHTML = words;
 
 var word = words[Math.floor(Math.random() * words.length)];
 
-//Set up answer array
+// set up answer array
+
 var answerArray = [];
 for (var i = 0; i < word.length; i++) {
     answerArray[i] = "_";
 }
 
 //Create variable to keep track of letters that remain to be guessed
-var remaingLetters = word.length;
+var remainingLetters = word.length;
 
-//Game Loop
+//Game Loop!!
+
 while (remainingLetters > 0) {
-    //Show the player their progress
-    var el = document.getElementById();
+    //show the player their progress
+    var el = document.getElementById("element");
     el.innerHTML = answerArray.join(" ");
-    //get a guess from player
-    var guess = prompt("Guess a Letter, or click Cancel to stop playing. ");
+    //Get a guess from the player
+    var guess = prompt("Guess a letter, or click Cancel to stop playing");
     if (guess === null) {
-        //exit the game loop
+        //Exit the game loop
         break;
-    }
-    else if (guess.length !== 1) {
-        alert("Please enter a single letter");
-        else {
-            //update the game state with the guess
-            for (var j = 0; j < word.length; j++) {
-                if (word[j] === guess) {
-                    answerArray[j] = guess;
-                    remaingLetters--;
-                }
+    } else if (guess.length !== 1) {
+        alert("Please enter a single letter.");
+    } else {
+        //Update the game state with the guess
+        for (var j = 0; j < word.length; j++) {
+            if (word[j] === guess) {
+                answerArray[j] = guess;
+                remainingLetters--;
             }
         }
     }
+    //End of game loop
 }
 
-el.innerHTML = answerArray.join("");
-alert("Good job the answer was " + word + ".");
+el.innerHTML = answerArray.join(" ");
+alert("Good job!! The answer was " + word + ".");
+
+

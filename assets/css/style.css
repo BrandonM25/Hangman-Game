@@ -1,20 +1,7 @@
 img{
     width: 100%;
 }
-.col-sm{
-    padding: 0 0 20px;
-}
-.col-sm-1 {
-    text-align: center;
+#element{
     font-size: 20px;
-    padding: 10px;
-    border: 2px solid black;
-    margin: 10px;
-    background-color: rgb(69, 112, 228);
-    color: white;
-  
-}
-
-#u, #v, #w, #x, #y, #z {
-    margin-left: 100px;
+    text-align: center;
 }
